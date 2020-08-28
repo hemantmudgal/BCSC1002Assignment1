@@ -15,4 +15,12 @@ public class Book {
         this.nameOfBook = nameOfBook;
         this.authorOfBook = authorOfBook;
     }
+
+    public Book(String ISBNNumberOfBook) {
+        if (ISBNNumberOfBook.length() == 13) {
+            this.ISBNNumberOfBook = ISBNNumberOfBook;
+        } else {
+            System.out.println("Invalid ISBN Number");
+        }
+    }
 }
