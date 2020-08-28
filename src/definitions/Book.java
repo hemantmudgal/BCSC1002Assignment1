@@ -23,4 +23,32 @@ public class Book {
             System.out.println("Invalid ISBN Number");
         }
     }
+
+    public String getNameOfBook() {
+        return nameOfBook;
+    }
+
+    public void setNameOfBook(String nameOfBook) {
+        this.nameOfBook = nameOfBook;
+    }
+
+    public String getAuthorOfBook() {
+        return authorOfBook;
+    }
+
+    public void setAuthorOfBook(String authorOfBook) {
+        this.authorOfBook = authorOfBook;
+    }
+
+    public String getISBNNumberOfBook() {
+        return ISBNNumberOfBook;
+    }
+
+    public void setISBNNumberOfBook() {
+        if (ISBNNumberOfBook.length() == 13) {
+            this.ISBNNumberOfBook = ISBNNumberOfBook;
+        } else {
+            System.out.println("Invalid ISBN Number");
+        }
+    }
 }
