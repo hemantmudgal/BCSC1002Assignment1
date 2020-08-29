@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Library {
     private final int LIBRARY_CAPACITY = 100;
     private static int totalBooksInLibrary = 0;
@@ -32,5 +34,9 @@ public class Library {
 
     public int getLIBRARY_CAPACITY() {
         return LIBRARY_CAPACITY;
+    }
+
+    public String toString() {
+        return String.format("Available book in Library: %s", Arrays.toString(availableBookInLibrary));
     }
 }
