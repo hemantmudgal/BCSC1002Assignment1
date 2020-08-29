@@ -21,4 +21,16 @@ public class Library {
             availableBookInLibrary[index] = new Book();
         }
     }
+
+    public Book[] getAvailableBookInLibrary() {
+        return availableBookInLibrary;
+    }
+
+    public void setAvailableBookInLibrary(Book[] availableBookInLibrary) {
+        this.availableBookInLibrary = availableBookInLibrary;
+    }
+
+    public int getLIBRARY_CAPACITY() {
+        return LIBRARY_CAPACITY;
+    }
 }
