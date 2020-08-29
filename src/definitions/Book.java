@@ -117,6 +117,15 @@ public class Book {
         this.nameOfBook = "This book is not available";
         this.authorOfBook = "Author name is not availale";
         this.ISBNNumberOfBook = "ISBN code is not available";
-        this.bookAvailability = defaultbookavailability;
+        this.bookAvailability = defaultBookAvailability;
+    }
+
+    /**
+     * Issue book.
+     */
+    public void bookIssue() {
+        if (bookAvailability) {
+            setBookAvailability(false);
+        }
     }
 }
