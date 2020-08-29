@@ -51,4 +51,9 @@ public class Book {
             System.out.println("Invalid ISBN Number");
         }
     }
+
+    @Override
+    public String toString() {
+        return String.format("Book Name: %s, Author Name: %s, ISBN Number: %s", getNameOfBook(), getAuthorOfBook(), getISBNNumberOfBook());
+    }
 }
