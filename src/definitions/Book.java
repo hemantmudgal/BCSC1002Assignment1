@@ -78,4 +78,15 @@ public class Book {
     public int hashCode() {
         return Objects.hash(getNameOfBook(), getAuthorOfBook(), getISBNNumberOfBook());
     }
+
+    /**
+     * Set name of the book and  author of the book.
+     *
+     * @param nameOfBook   Name of the Book.
+     * @param authorOfBook Author Name of the Book.
+     */
+    public void addBook(String nameOfBook, String authorOfBook) {
+        setNameOfBook(nameOfBook);
+        setAuthorOfBook(authorOfBook);
+    }
 }
