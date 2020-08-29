@@ -28,6 +28,13 @@ public class Book {
         }
     }
 
+    public Book() {
+        this.nameOfBook = "THIS BOOK IS NOT AVAILABLE";
+        this.authorOfBook = "NOT FOUND AUTHOR NAME";
+        this.ISBNNumberOfBook = "INVALID ISBN CODE";
+        this.bookAvailability = defalutBookAvailability;
+    }
+
     public String getNameOfBook() {
         return nameOfBook;
     }
