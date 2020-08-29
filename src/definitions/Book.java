@@ -128,4 +128,13 @@ public class Book {
             setBookAvailability(false);
         }
     }
+
+    /**
+     * Return book.
+     */
+    public void bookReturn() {
+        if (isBookAvailability()) {
+            setBookAvailability(true);
+        }
+    }
 }
