@@ -97,4 +97,14 @@ public class Book {
         setNameOfBook(nameOfBook);
         setAuthorOfBook(authorOfBook);
     }
+
+    /**
+     * All fields set as defalut values.
+     */
+    public void bookRemove() {
+        this.nameOfBook = "This book is not available";
+        this.authorOfBook = "Author name is not availale";
+        this.ISBNNumberOfBook = "ISBN code is not available";
+        this.bookAvailability = defalutBookAvailability;
+    }
 }
