@@ -32,7 +32,7 @@ public class Book {
         this.nameOfBook = "THIS BOOK IS NOT AVAILABLE";
         this.authorOfBook = "NOT FOUND AUTHOR NAME";
         this.ISBNNumberOfBook = "INVALID ISBN CODE";
-        this.bookAvailability = defalutBookAvailability;
+        this.bookAvailability = defaultBookAvailability;
     }
 
     public String getNameOfBook() {
@@ -61,6 +61,18 @@ public class Book {
         } else {
             System.out.println("Invalid ISBN Number");
         }
+    }
+
+    public boolean isBookAvailability() {
+        return bookAvailability;
+    }
+
+    public void setBookAvailability(boolean bookAvailable) {
+        bookAvailability = bookAvailable;
+    }
+
+    public boolean isDefaultBookAvailability() {
+        return defaultBookAvailability;
     }
 
     @Override
@@ -105,6 +117,6 @@ public class Book {
         this.nameOfBook = "This book is not available";
         this.authorOfBook = "Author name is not availale";
         this.ISBNNumberOfBook = "ISBN code is not available";
-        this.bookAvailability = defaultBookAvailability;
+        this.bookAvailability = defaultbookavailability;
     }
 }
