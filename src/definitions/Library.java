@@ -7,12 +7,7 @@
 package definitions;
 
 public class Library {
+    private final int LIBRARY_CAPACITY = 100;
     private static int totalBooksInLibrary = 0;
-    private final int CAPACITY_OF_LIBRARY = 100;
-    private Book[] availableBooksInLibrary;
-
-    public Library(Book[] booksCurrentlyAvailableInLibrary) {
-        this.availableBooksInLibrary = availableBooksInLibrary;
-    }
-
+    private Book[] availabelBookInLibrary;
 }
