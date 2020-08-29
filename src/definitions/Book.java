@@ -12,6 +12,7 @@ public class Book {
     private String nameOfBook;
     private String authorOfBook;
     private String ISBNNumberOfBook;
+    private boolean bookAvailability;
 
     public Book(String nameOfBook, String authorOfBook) {
         this.nameOfBook = nameOfBook;
