@@ -9,5 +9,16 @@ package definitions;
 public class Library {
     private final int LIBRARY_CAPACITY = 100;
     private static int totalBooksInLibrary = 0;
-    private Book[] availabelBookInLibrary;
+    private Book[] availableBookInLibrary;
+
+    public Library(Book[] availabelBookInLibrary) {
+        this.availableBookInLibrary = availabelBookInLibrary;
+    }
+
+    public Library() {
+        availableBookInLibrary = new Book[LIBRARY_CAPACITY];
+        for (int index = 0; index < availableBookInLibrary.length; index++) {
+            availableBookInLibrary[index] = new Book();
+        }
+    }
 }
