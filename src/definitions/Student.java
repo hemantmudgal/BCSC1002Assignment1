@@ -152,4 +152,30 @@ public class Student {
         }
     }
 
+    /**
+     * Book return to library.
+     *
+     * @param nameOfBook   Name of the book.
+     * @param authorOfBook Author name of the book.
+     * @param object       Library-Object.
+     */
+    public void bookReturn(String nameOfBook, String authorOfBook, Library object) {
+        boolean bookReturnSuccessfully = false;
+        for (Book book : booksIssuedByStudent) {
+            if (book.getNameOfBook().equalsIgnoreCase(nameOfBook) && book.getAuthorOfBook().equalsIgnoreCase(authorOfBook) && !book.isBookAvailability()) {
+                book.bookReturn();
+                object.bookReturn(nameOfBook, authorOfBook);
+                book.bookRemove();
+                totalBooksIssuedByStudent--;
+                bookReturnSuccessfully = true;
+                break;
+            }
+        }
+        if (!bookReturnSuccessfully) {
+            System.out.println("SORRY NO SUCH BOOK AVAILABLE");
+        } else if (bookReturnSuccessfully) {
+            System.out.println("Thank you for Returning, " + nameOfBook + ".");
+        }
+    }
+
 }
