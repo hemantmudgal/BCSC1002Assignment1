@@ -128,4 +128,25 @@ public class Library {
             System.out.println(nameOfBook + "Book is issued successfully.");
         }
     }
+
+    /**
+     * Book return to library.
+     *
+     * @param nameOfBook   Name of the book.
+     * @param authorOfBook Author name of the book.
+     */
+    public void bookReturn(String nameOfBook, String authorOfBook) {
+        for (Book book : availableBookInLibrary) {
+            if (book.getNameOfBook().equalsIgnoreCase(nameOfBook) && book.getAuthorOfBook().equalsIgnoreCase(authorOfBook) && !book.isBookAvailability()) {
+                book.bookReturn();
+                break;
+            }
+        }
+    }
+    /**
+     * method for ISBN Number for the book.
+     * @param nameOfBook    Name of the book.
+     * @param authorOfBook  Author name of the book.
+     * @param ISBN
+     */
 }

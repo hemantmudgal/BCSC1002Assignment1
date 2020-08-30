@@ -12,7 +12,7 @@ public class Book {
     private final boolean defaultBookAvailability = true;
     private String nameOfBook;
     private String authorOfBook;
-    private String ISBNNumberOfBook;
+    private String isbnNumberOfBook;
     private boolean bookAvailability;
 
     public Book(String nameOfBook, String authorOfBook) {
@@ -22,7 +22,7 @@ public class Book {
 
     public Book(String ISBNNumberOfBook) {
         if (ISBNNumberOfBook.length() == 13) {
-            this.ISBNNumberOfBook = ISBNNumberOfBook;
+            this.isbnNumberOfBook = ISBNNumberOfBook;
         } else {
             System.out.println("Invalid ISBN Number");
         }
@@ -31,7 +31,7 @@ public class Book {
     public Book() {
         this.nameOfBook = "THIS BOOK IS NOT AVAILABLE";
         this.authorOfBook = "NOT FOUND AUTHOR NAME";
-        this.ISBNNumberOfBook = "INVALID ISBN CODE";
+        this.isbnNumberOfBook = "INVALID ISBN CODE";
         this.bookAvailability = defaultBookAvailability;
     }
 
@@ -51,13 +51,13 @@ public class Book {
         this.authorOfBook = authorOfBook;
     }
 
-    public String getISBNNumberOfBook() {
-        return ISBNNumberOfBook;
+    public String getIsbnNumberOfBook() {
+        return isbnNumberOfBook;
     }
 
     public void setISBNNumberOfBook() {
-        if (ISBNNumberOfBook.length() == 13) {
-            this.ISBNNumberOfBook = ISBNNumberOfBook;
+        if (isbnNumberOfBook.length() == 13) {
+            this.isbnNumberOfBook = isbnNumberOfBook;
         } else {
             System.out.println("Invalid ISBN Number");
         }
@@ -77,7 +77,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return String.format("Book Name: %s, Author Name: %s, ISBN Number: %s", getNameOfBook(), getAuthorOfBook(), getISBNNumberOfBook());
+        return String.format("Book Name: %s, Author Name: %s, ISBN Number: %s", getNameOfBook(), getAuthorOfBook(), getIsbnNumberOfBook());
     }
 
     @Override
@@ -91,12 +91,12 @@ public class Book {
         Book book = (Book) object;
         return Objects.equals(this.getNameOfBook(), book.getNameOfBook()) &&
                 Objects.equals(this.getAuthorOfBook(), book.getAuthorOfBook()) &&
-                Objects.equals(this.getISBNNumberOfBook(), book.getISBNNumberOfBook());
+                Objects.equals(this.getIsbnNumberOfBook(), book.getIsbnNumberOfBook());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getNameOfBook(), getAuthorOfBook(), getISBNNumberOfBook());
+        return Objects.hash(getNameOfBook(), getAuthorOfBook(), getIsbnNumberOfBook());
     }
 
     /**
@@ -116,7 +116,7 @@ public class Book {
     public void bookRemove() {
         this.nameOfBook = "This book is not available";
         this.authorOfBook = "Author name is not availale";
-        this.ISBNNumberOfBook = "ISBN code is not available";
+        this.isbnNumberOfBook = "ISBN code is not available";
         this.bookAvailability = defaultBookAvailability;
     }
 
