@@ -128,4 +128,28 @@ public class Student {
         return Objects.hash(getFirstName(), getRollNumber(), getTotalBooksIssuedByStudent(), getBooksIssuedByStudent(), getLimitOnIssuingBookForStudent());
     }
 
+    /**
+     * Book issue from library.
+     *
+     * @param nameOfBook   NameOfBook.
+     * @param authorOfBook Author name of book.
+     * @param object       Library-Object.
+     */
+    public void bookIssue(String nameOfBook, String authorOfBook, Library object) {
+        for (Book book : booksIssuedByStudent) {
+            if (totalBooksIssuedByStudent < LIMIT_ON_ISSUING_BOOK_FORSTUDENT) {
+                if (book.getNameOfBook().equals("This book is not available.")) {
+                    object.bookIssue(nameOfBook, authorOfBook);
+                    book.bookIssue();
+                    book.addBook(nameOfBook, authorOfBook);
+                    totalBooksIssuedByStudent++;
+                    break;
+                }
+            }
+        }
+        if (totalBooksIssuedByStudent >= LIMIT_ON_ISSUING_BOOK_FORSTUDENT) {
+            System.out.println("you can't issue more than three books.");
+        }
+    }
+
 }
