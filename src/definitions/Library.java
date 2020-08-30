@@ -57,5 +57,22 @@ public class Library {
     public int hashCode() {
         return Objects.hash(getAvailableBookInLibrary(), getLibraryCapacity());
     }
+
+    /**
+     * book Add to Library.
+     *
+     * @param nameOfBook   Name of the Book.
+     * @param authorOfBook Author name of the Book.
+     */
+    public void addBook(String nameOfBook, String authorOfBook) {
+        for (Book book : availableBookInLibrary) {
+            if (book.getNameOfBook().equals("This book is not available")) {
+                book.addBook(nameOfBook, authorOfBook);
+                totalBooksInLibrary++;
+                System.out.println(nameOfBook + "Book is added successfully.");
+                break;
+            }
+        }
+    }
 }
 
