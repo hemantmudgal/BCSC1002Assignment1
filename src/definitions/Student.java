@@ -7,6 +7,7 @@
 package definitions;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Student {
     private static int initialNumberofBookIssuedByStudent = 0;
@@ -105,5 +106,20 @@ public class Student {
                 "Student Name: %s, Student Roll no: %d, Total number of issued books: %d, Details of all books: %s",
                 getFirstName(), getRollNumber(), getTotalBooksIssuedByStudent(), Arrays.toString(booksIssuedByStudent)
         );
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        Student student = (Student) object;
+        return this.getRollNumber() == student.getRollNumber() &&
+                this.getTotalBooksIssuedByStudent() == student.getTotalBooksIssuedByStudent() &&
+                Objects.equals(this.getFirstName(), student.getFirstName()) &&
+                Arrays.equals(this.getBooksIssuedByStudent(), student.getBooksIssuedByStudent());
     }
 }
