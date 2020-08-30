@@ -6,6 +6,8 @@
  * */
 package definitions;
 
+import java.util.Arrays;
+
 public class Student {
     private static int initialNumberofBookIssuedByStudent = 0;
     private final int LIMIT_ON_ISSUING_BOOK_FORSTUDENT = 3;
@@ -96,5 +98,12 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String toString() {
+        return String.format(
+                "Student Name: %s, Student Roll no: %d, Total number of issued books: %d, Details of all books: %s",
+                getFirstName(), getRollNumber(), getTotalBooksIssuedByStudent(), Arrays.toString(booksIssuedByStudent)
+        );
     }
 }
