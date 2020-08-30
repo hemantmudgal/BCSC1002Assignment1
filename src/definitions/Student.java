@@ -178,4 +178,12 @@ public class Student {
         }
     }
 
+    /**
+     * This method shows the detail of books which is issued by the Student.
+     */
+    public void issuedBooksDetails() {
+        for (Book book : booksIssuedByStudent) {
+            System.out.println(book);
+        }
+    }
 }
