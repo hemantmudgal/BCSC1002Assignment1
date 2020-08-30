@@ -41,4 +41,60 @@ public class Student {
             booksIssuedByStudent[index] = new Book();
         }
     }
+
+    public static int getInitialNumberofBookIssuedByStudent() {
+        return initialNumberofBookIssuedByStudent;
+    }
+
+    public Book[] getBooksIssuedByStudent() {
+        return booksIssuedByStudent.clone();
+    }
+
+    public void setBooksIssuedByStudent(Book[] booksIssuedByStudent) {
+        this.booksIssuedByStudent = booksIssuedByStudent;
+    }
+
+    public int getTotalBooksIssuedByStudent() {
+        return totalBooksIssuedByStudent;
+    }
+
+    public void setTotalBooksIssuedByStudent(int totalBooksIssuedByStudent) {
+        this.totalBooksIssuedByStudent = totalBooksIssuedByStudent;
+    }
+
+    public long getRollNumber() {
+        return rollNumber;
+    }
+
+    public void setRollNumber(long rollNumber) {
+        this.rollNumber = rollNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public int getLIMIT_ON_ISSUING_BOOK_FORSTUDENT() {
+        return LIMIT_ON_ISSUING_BOOK_FORSTUDENT;
+    }
+
+    public String getMiddleName() {
+        return middleName;
+    }
+
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
