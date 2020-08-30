@@ -74,5 +74,27 @@ public class Library {
             }
         }
     }
-}
 
+    /**
+     * Book remove from Library.
+     *
+     * @param nameOfBook   Name of the Book.
+     * @param authorOfBook Author name of the Book.
+     */
+    public void removeBook(String nameOfBook, String authorOfBook) {
+        boolean bookRemoved = false;
+        for (Book book : availableBookInLibrary) {
+            if (book.getNameOfBook().equalsIgnoreCase(nameOfBook) && book.getAuthorOfBook().equalsIgnoreCase(authorOfBook)) {
+                ;
+                book.bookRemove();
+                bookRemoved = true;
+                break;
+            }
+        }
+        if (!bookRemoved) {
+            System.out.println("Book is not available");
+        } else if (bookRemoved) {
+            System.out.println(nameOfBook + "Book is removed successfully.");
+        }
+    }
+}
