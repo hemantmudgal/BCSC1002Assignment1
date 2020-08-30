@@ -81,7 +81,7 @@ public class Student {
         this.firstName = firstName;
     }
 
-    public int getLIMIT_ON_ISSUING_BOOK_FORSTUDENT() {
+    public int getLimitOnIssuingBookForStudent() {
         return LIMIT_ON_ISSUING_BOOK_FORSTUDENT;
     }
 
@@ -122,4 +122,10 @@ public class Student {
                 Objects.equals(this.getFirstName(), student.getFirstName()) &&
                 Arrays.equals(this.getBooksIssuedByStudent(), student.getBooksIssuedByStudent());
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getFirstName(), getRollNumber(), getTotalBooksIssuedByStudent(), getBooksIssuedByStudent(), getLimitOnIssuingBookForStudent());
+    }
+
 }
