@@ -98,43 +98,5 @@ public class Book {
     public int hashCode() {
         return Objects.hash(getNameOfBook(), getAuthorOfBook(), getIsbnNumberOfBook());
     }
-
-    /**
-     * Set name of the book and  author of the book.
-     *
-     * @param nameOfBook   Name of the Book.
-     * @param authorOfBook Author Name of the Book.
-     */
-    public void addBook(String nameOfBook, String authorOfBook) {
-        setNameOfBook(nameOfBook);
-        setAuthorOfBook(authorOfBook);
-    }
-
-    /**
-     * All fields set as defalut values.
-     */
-    public void bookRemove() {
-        this.nameOfBook = "This book is not available";
-        this.authorOfBook = "Author name is not availale";
-        this.isbnNumberOfBook = "ISBN code is not available";
-        this.bookAvailability = defaultBookAvailability;
-    }
-
-    /**
-     * Issue book.
-     */
-    public void bookIssue() {
-        if (bookAvailability) {
-            setBookAvailability(false);
-        }
-    }
-
-    /**
-     * Return book.
-     */
-    public void bookReturn() {
-        if (isBookAvailability()) {
-            setBookAvailability(true);
-        }
-    }
 }
+
