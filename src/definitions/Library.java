@@ -39,4 +39,17 @@ public class Library {
     public String toString() {
         return String.format("Available book in Library: %s", Arrays.toString(availableBookInLibrary));
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+        Library library = (Library) object;
+        return Arrays.equals(this.getAvailableBookInLibrary(), library.getAvailableBookInLibrary());
+    }
 }
+
