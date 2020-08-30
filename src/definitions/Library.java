@@ -85,7 +85,6 @@ public class Library {
         boolean bookRemoved = false;
         for (Book book : availableBookInLibrary) {
             if (book.getNameOfBook().equalsIgnoreCase(nameOfBook) && book.getAuthorOfBook().equalsIgnoreCase(authorOfBook)) {
-                ;
                 book.bookRemove();
                 bookRemoved = true;
                 break;
@@ -123,7 +122,7 @@ public class Library {
             }
         }
         if (!isBookIssue) {
-            System.out.println("Book is not availabel.");
+            System.out.println("Book is not available.");
         } else if (isBookIssue) {
             System.out.println(nameOfBook + "Book is issued successfully.");
         }
@@ -143,10 +142,30 @@ public class Library {
             }
         }
     }
+
     /**
      * method for ISBN Number for the book.
-     * @param nameOfBook    Name of the book.
-     * @param authorOfBook  Author name of the book.
-     * @param ISBN
+     *
+     * @param nameOfBook       Name of the book.
+     * @param authorOfBook     Author name of the book.
+     * @param isbnNumberOfBook ISBN code of book.
      */
+    public void setBookIsbnNumber(String nameOfBook, String authorOfBook, String isbnNumberOfBook) {
+        boolean isbnInserted = false;
+        for (Book book : availableBookInLibrary) {
+            if (book.getNameOfBook().equalsIgnoreCase(nameOfBook) && book.getAuthorOfBook().equalsIgnoreCase(authorOfBook)) {
+                book.setISBNNumberOfBook();
+                isbnInserted = true;
+                if (!book.getIsbnNumberOfBook().equals("NOT AVAILABLE")) {
+                    System.out.println(isbnNumberOfBook + ", ISBN Code successfully added for book" + nameOfBook + ".");
+                }
+                break;
+            }
+            if (!isbnInserted) {
+                System.out.println("Book is not available");
+            } else if (isbnInserted) {
+                System.out.println(isbnInserted + ", ISBN Code successfully added for book" + nameOfBook + ".");
+            }
+        }
+    }
 }
