@@ -10,8 +10,8 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Library {
+    private static int totalBooksInLibrary;
     private final int LIBRARY_CAPACITY = 100;
-    private static int totalBooksInLibrary = 0;
     private Book[] availableBookInLibrary;
 
     public Library(Book[] availabelBookInLibrary) {
@@ -23,6 +23,10 @@ public class Library {
         for (int index = 0; index < availableBookInLibrary.length; index++) {
             availableBookInLibrary[index] = new Book();
         }
+    }
+
+    public static void issueBook(String bookName) {
+        System.out.println(bookName + "book has been issued to you successfully .");
     }
 
     public Book[] getAvailableBookInLibrary() {
@@ -58,17 +62,13 @@ public class Library {
         return Objects.hash(getAvailableBookInLibrary(), getLibraryCapacity());
     }
 
-    public void issueBook(String bookName) {
-        System.out.println(bookName + "book has been issued to you successfully .");
+    public static void returnBook(String bookName) {
+        System.out.println(bookName + " has been returned successfully . ");
     }
 
     public void listOfBooksIssued() {
-        for (Book book : availableBookInLibrary) {
+        for (Book book : this.availableBookInLibrary) {
             System.out.println(book);
         }
-    }
-
-    public void returnBook(String bookName) {
-        System.out.println(bookName + " has been returned successfully . ");
     }
 }
