@@ -57,4 +57,18 @@ public class Library {
     public int hashCode() {
         return Objects.hash(getAvailableBookInLibrary(), getLibraryCapacity());
     }
+
+    public void issueBook(String bookName) {
+        System.out.println(bookName + "book has been issued to you successfully .");
+    }
+
+    public void listOfBooksIssued() {
+        for (Book book : availableBookInLibrary) {
+            System.out.println(book);
+        }
+    }
+
+    public void returnBook(String bookName) {
+        System.out.println(bookName + " has been returned successfully . ");
+    }
 }
