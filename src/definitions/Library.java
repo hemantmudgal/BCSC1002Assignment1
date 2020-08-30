@@ -97,4 +97,13 @@ public class Library {
             System.out.println(nameOfBook + "Book is removed successfully.");
         }
     }
+
+    /**
+     * It shows the details of all the books which is available in library.
+     */
+    public void listOfBooks() {
+        for (Book book : availableBookInLibrary) {
+            System.out.println(book);
+        }
+    }
 }
