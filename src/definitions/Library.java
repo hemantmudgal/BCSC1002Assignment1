@@ -106,4 +106,26 @@ public class Library {
             System.out.println(book);
         }
     }
+
+    /**
+     * method for issue book from library.
+     *
+     * @param nameOfBook   Name of the book.
+     * @param authorOfBook Author name of the book.
+     */
+    public void bookIssue(String nameOfBook, String authorOfBook) {
+        boolean isBookIssue = false;
+        for (Book book : availableBookInLibrary) {
+            if (book.getNameOfBook().equalsIgnoreCase(nameOfBook) && book.getAuthorOfBook().equalsIgnoreCase(authorOfBook) && book.isBookAvailability()) {
+                book.bookIssue();
+                isBookIssue = true;
+                break;
+            }
+        }
+        if (!isBookIssue) {
+            System.out.println("Book is not availabel.");
+        } else if (isBookIssue) {
+            System.out.println(nameOfBook + "Book is issued successfully.");
+        }
+    }
 }
