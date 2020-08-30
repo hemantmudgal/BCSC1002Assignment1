@@ -33,4 +33,12 @@ public class Student {
         }
         totalBooksIssuedByStudent = 0;
     }
+
+    public Student(String firstNameOfStudent) {
+        this.firstName = firstNameOfStudent;
+        booksIssuedByStudent = new Book[LIMIT_ON_ISSUING_BOOK_FORSTUDENT];
+        for (int index = 0; index < booksIssuedByStudent.length; index++) {
+            booksIssuedByStudent[index] = new Book();
+        }
+    }
 }
