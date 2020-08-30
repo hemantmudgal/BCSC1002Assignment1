@@ -7,6 +7,7 @@
 package definitions;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 public class Library {
     private final int LIBRARY_CAPACITY = 100;
@@ -32,7 +33,7 @@ public class Library {
         this.availableBookInLibrary = availableBookInLibrary;
     }
 
-    public int getLIBRARY_CAPACITY() {
+    public int getLibraryCapacity() {
         return LIBRARY_CAPACITY;
     }
 
@@ -50,6 +51,11 @@ public class Library {
         }
         Library library = (Library) object;
         return Arrays.equals(this.getAvailableBookInLibrary(), library.getAvailableBookInLibrary());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAvailableBookInLibrary(), getLibraryCapacity());
     }
 }
 
