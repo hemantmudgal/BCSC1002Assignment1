@@ -24,4 +24,13 @@ public class Student {
         this.totalBooksIssuedByStudent = totalBookSIssuedByStudent;
         this.booksIssuedByStudent = booksIssuedByStudent;
     }
+
+    public Student() {
+        this.firstName = "NOT Found";
+        booksIssuedByStudent = new Book[LIMIT_ON_ISSUING_BOOK_FORSTUDENT];
+        for (int index = 0; index < booksIssuedByStudent.length; index++) {
+            booksIssuedByStudent[index] = new Book();
+        }
+        totalBooksIssuedByStudent = 0;
+    }
 }
